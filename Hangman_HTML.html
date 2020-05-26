@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Hangman, Photography, ED Webdevelopment & Photography">
+  <meta name="description" content="Play Hangman">
+  <meta name="author" content="Danny Eeraerts EDweb&photoSTUDIO">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+  <h1 class="title">
+      Hangman for webdevelopers
+  </h1>
+  <hr/>
+  </header>
+
+  <div class="wrapper">
+    <aside class="column">
+      <div id="letter-container">
+        <div class="letter">A</div>
+        <div class="letter">B</div>
+        <div class="letter">C</div>
+        <div class="letter">D</div>
+        <div class="letter">E</div>
+        <div class="letter">F</div>
+        <div class="letter">G</div>
+        <div class="letter">H</div>
+        <div class="letter">I</div>
+        <div class="letter">J</div>
+        <div class="letter">K</div>
+        <div class="letter">L</div>
+        <div class="letter">M</div>
+        <div class="letter">N</div>
+        <div class="letter">O</div>
+        <div class="letter">P</div>
+        <div class="letter">Q</div>
+        <div class="letter">R</div>
+        <div class="letter">S</div>
+        <div class="letter">T</div>
+        <div class="letter">U</div>
+        <div class="letter">V</div>
+        <div class="letter">W</div>
+        <div class="letter">X</div>
+        <div class="letter">Y</div>
+        <div class="letter">Z</div>
+      </div>
+
+      <div id="score-container">
+        <p>score:&nbsp <var id="myScore">0</var></p>
+      </div>
+
+      <div id="hint-container">
+        <button id ="showHideHintButton" class ="hide">Hint<i class="fas fa-caret-right fa-lg"></i></button>
+        <div id ="showHideHint" class ="hide">
+          <p>Refers to wireless Internet access.</p>
+        </div>
+      </div>
+
+
+      <div id="rules-container">
+        <button id ="showHideRulesButton">game rules<i class="fas fa-caret-right fa-lg"></i></button>
+        <article class ="showHideRules">
+          <h3> How to play our Interactive Hangman Game</h3>
+          <ul>
+            <li> To start the game, click on the button "new game"</li>
+            <li>You will see a number of short underlines together that represent the number of letters in the word or expression you have to guess. (e.g. _ _ _ _ _ _ _ ).</li>
+            <li>A word that contains a hyphen or an expression that contains one or more spaces is already indicated. (e.g. _ _ _ - _ _ _ _ ) or (e.g. _ _ _ &nbsp;&nbsp;_ _ _ _ ).</li>
+            <li>Click on the letter that you think is included in the word.</li>
+            <li>If you guess the correct letter, that letter become green and will appear in the position in the word. It will replace one of the littel lines (e.g. _ _ A _ _ _ _ ).</li>
+            <li>If the letter you guessed is not in the word, the letter will become red and a part of the gallows tree appear in the image.</li>
+            <li>If the body appears, you are 'hanged' which means you have lost. You have eight chances before being hanged.</li>
+            <li>If you are hanged, it is the opponent's turn</li>
+            <li>If you guess all the letters in the word before you are 'hanged', you win.</li>
+            <li>You get the maximum score of 8 points if you guess the word without mistakes.</li>
+            <li>Every error is minus one point.</li>
+            <li>You loose 3 points when you ask a hint. Thus a negative score is possible. </li>
+            <li>You can continue to play as long as you are not hung up. The points are added together.</li>
+          </ul>
+          <p><strong>GOOD LUCK.</strong></p>
+          <em>NOTE - You will need Javascript enabled for these games to work.</em>
+        </article>
+      </div>
+    </aside>
+
+    <main>
+      <section id="image-container">
+        <img id="image" src="https://i.postimg.cc/3NZ6HL2Q/hangman01.png" alt="">
+      </section>
+      <section id="solution-container">
+        <div class="solution-letter"></div>
+      </section>
+      <section id="win-lose-container" class="start">
+        <strong>Click</strong> me for a new game.
+      </section>
+    </main>
+
+  </div>
+
+  <footer>
+      <div>Copyright &copy; EDweb&photoSTUDIO <span id="htmlYear">year</span></div>
+  </footer>
+
+
+
+<script src="Hangman_script.js"></script>
+
+</body>
+</html>
