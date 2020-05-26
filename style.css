@@ -1,0 +1,221 @@
+
+html {
+  font-size: 1em;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
+  margin: 0;
+  padding: 0;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+body {
+  background: #333;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+header h1{
+  font-size: 2.5em;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  background: #757575;
+  color: #fff;
+  border: solid 1.5px #000;
+  text-shadow: 5px 5px 3px rgba(0,0,0,0.33);
+}
+.wrapper{
+  display: flex;
+  text-align: center;
+}
+.letter{
+  color: #fff;
+  background: #777;
+  margin: 0.125em 0.1em;
+  padding: 0.75em 0;
+  width: 2.75em;
+  height: auto;
+  border-top: solid 0.5px #fff;
+  border-left: solid 0.5px #fff;
+  border-bottom: solid 0.75px #000;
+  border-right: solid 0.75px #000;
+  border-radius: 5px;
+}
+.letter:hover{
+  background-color: peru;
+}
+hr{
+  border: none;
+  height: 1px;
+  background-color:#ddd;
+}
+aside{
+  padding: 1rem 2rem;
+}
+aside, main{
+  width: 50%;
+}
+#letter-container{
+  padding: .6rem .8rem;
+  margin: 2rem 1rem;
+  border: solid 0.5px #fff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+}
+.letter.failed{
+  cursor: not-allowed;
+  text-decoration: line-through;
+  background-color: #b43131;
+}
+.letter.success {
+  cursor: not-allowed;
+  background-color: #649514;
+}
+#letter-container::after {
+  content: "";
+  flex: auto;
+}
+#showHideHint, #rules-container article{
+  color: #eee;
+  padding: .75rem;
+  margin: 2rem 1rem 4rem 1rem;
+  border: solid 0.5px #fff;
+  text-align: left;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+#rules-container article h3, #rules-container article p{
+  text-align: center  !important;
+  padding: 0.5rem;
+  background: #649514;
+  margin-bottom: 1em;
+}
+li{
+  margin-left: 1em;
+}
+li:last-child{
+  margin-bottom: 1em;
+}
+button{
+  background-color: #777777;
+  color:#fff;
+  font-size: 1em;
+  padding: 0.85em 1.5em;
+  border-top: solid 0.5px #fff;
+  border-left: solid 0.5px #fff;
+  border-bottom: solid 0.5px #000;
+  border-right: solid 0.75px #000;
+  border-radius: 5px;
+}
+button:hover, #win-lose-container:hover{
+  background: linear-gradient(135deg, rgba(220, 220, 220, 0.50), rgba(0,0,0,0.75));
+  text-decoration: none;
+}
+i{
+  margin-left: 0.25em;
+  alignment-baseline: middle;
+}
+#score-container{
+  float: right;
+  margin: 0.75em 1em 0 0;
+}
+#score-container p{
+  color: #eee;
+}
+#myScore{
+  color: #649514;
+  font-size: 1.25em;
+}
+#image-container{
+  padding: 4rem 2rem 2rem 2rem;
+  text-align: center;
+}
+#solution-container {
+  display: flex;
+  justify-content: center;
+}
+.solution-letter{
+  margin: .2rem .4rem;
+  text-align: center;
+  color: #649514;
+  font-size: 1.25rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-bottom: 2px solid #ccc;
+}
+#win-lose-container{
+  color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  margin: 3.25rem 1.75rem 1rem 1.75rem;
+  padding: 0.75rem;
+  border-top: solid 0.5px #fff;
+  border-left: solid 0.5px #fff;
+  border-bottom: solid 0.5px #000;
+  border-right: solid 0.75px #000;
+  border-radius: 5px;
+}
+.won{
+  background-color: #649514;
+}
+.lost{
+  background-color: #b43131;
+}
+.start{
+  background-color: #777;
+}
+footer{
+  color: #aaa;
+  background: #333;
+  position: fixed;
+  bottom: 0;
+  border-top: solid 0.5px #ddd;
+  padding: 1rem;
+  margin: 1rem 1rem 0 1rem;
+  width: 96.5%;
+}
+.hide, .showHideHint, .showHideRules{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;}
+  aside, main {
+    width:100% !important;
+  }
+  header h1{
+    font-size: 1.75em;
+    padding: 0.5em 0;
+  }
+  #letter-container{
+    margin: 1rem;
+  }
+  #image-container{
+    padding: 0.25rem !important;
+  }
+  .solution-letter{
+    margin: .2em;
+  }
+  #win-lose-container{
+    margin: 1.75rem 1.75rem 1rem 1.75rem;
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+  footer{
+    position: static;
+  }
+}
